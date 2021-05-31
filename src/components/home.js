@@ -40,6 +40,7 @@ function Home() {
 		<View style={styles.container}>
 			<Text>Current Location</Text>
 			<Text style={styles.paragraph}>{`Longitude: ${longitude}`}</Text>
+
 			<Text style={styles.paragraph}>{`Latitude: ${latitude}`}</Text>
 			<CurrentLocation location={location} />
 		</View>

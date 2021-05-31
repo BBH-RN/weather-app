@@ -2,10 +2,18 @@ import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import React from "react";
+import React,{useRef} from "react";
 import { StyleSheet, View } from "react-native";
 import Search from "./src/components/search";
 import Home from "./src/components/home";
+import {
+	Text,
+	ScrollView,
+	ImageBackground,
+	useWindowDimensions,
+	Animated,
+	TouchableOpacity,
+  } from 'react-native';
 
 const HomeStack = createStackNavigator();
 const SearchStack = createStackNavigator();
@@ -35,6 +43,8 @@ function SearchStackScreen() {
 }
 
 export default function App() {
+	const {width: windowWidth, height: windowHeight} = useWindowDimensions();
+	const scrollX = useRef(new Animated.Value(0)).current;
 	const Tab = createBottomTabNavigator();
 	return (
 		<View style={styles.container}>

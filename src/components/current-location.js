@@ -3,13 +3,20 @@ import { StyleSheet, Text, View } from "react-native";
 import superagent from "superagent";
 
 function CurrentLocation(props) {
-	const [weather, setWeather] = useState(null);
+	const [weather, setWeather] = useState({});
 
 	const getWeather = async (api) => {
 		try {
 			let response = await superagent.get(api);
 			console.log('CURRENT LOCATION ==========',response.body);
-			setWeather(response.body.location.name);
+			// setWeather(response.body.location.name);
+			setWeather({
+				temp: response.body.current.temp_c,
+				date: response.body.current.last_updated,
+				icon: response.body.current.condition.icon,
+				condition: response.body.current.condition.text,
+				location: response.body.location.name
+			});
 		} catch (error) {
 			console.error(
 				"An error occurred while getting data from API",
@@ -30,7 +37,7 @@ function CurrentLocation(props) {
 
 	return (
 		<View>
-			<Text>{weather}</Text>
+			<Text>{weather.location}</Text>
 		</View>
 	);
 }
