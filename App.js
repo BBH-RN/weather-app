@@ -4,8 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import Search from "./components/search";
-import Home from "./components/home";
+import Search from "./src/components/search";
+import Home from "./src/components/home";
 
 const HomeStack = createStackNavigator();
 const SearchStack = createStackNavigator();

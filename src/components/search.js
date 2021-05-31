@@ -8,12 +8,12 @@ function Search(props) {
 
     const getWeather = async () => {
         const key = "cdcec5524fff4ae28d195512213105";
-		const api = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=1&aqi=no&alerts=no`;
+		const api = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=3&aqi=no&alerts=no`;
 		try {
-            console.log({api});
-            console.log({city});
+            // console.log({api});
+            // console.log({city});
 			let response = await superagent.get(api);
-			console.log(response.body);
+			console.log('SEARCH RESPONSE ===========',response.body);
 			setWeather(response.body.current.temp_c);
 		} catch (error) {
 			console.error(

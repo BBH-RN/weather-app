@@ -8,7 +8,7 @@ function CurrentLocation(props) {
 	const getWeather = async (api) => {
 		try {
 			let response = await superagent.get(api);
-			console.log(response.body);
+			console.log('CURRENT LOCATION ==========',response.body);
 			setWeather(response.body.location.name);
 		} catch (error) {
 			console.error(
