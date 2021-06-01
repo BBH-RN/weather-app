@@ -193,14 +193,6 @@ function CurrentLocation(props) {
 					</View>
 				</ImageBackground>
 			)}
-		
-// 		  <Image style={styles.image} source={icon} />
-// 		  <Text style={[styles.smallText, styles.textStyle]}>
-// 			{weather.condition}
-// 		  </Text>
-// 		  <Text style={[styles.largeText, styles.textStyle]}>
-// 			{weather.temp}°
-// 		  </Text>
 		</View>
 	);
 }
@@ -210,7 +202,7 @@ const styles = StyleSheet.create({
 		marginTop: 25,
 		display: "flex",
 		alignItems: "center",
-		width: 200,
+		width: 178,
 		// alignSelf: "stretch",
 	},
 	eachWeatherContainer: {

@@ -137,35 +137,10 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    width: 200,
     backgroundColor: "silver",
     //   alignItems: 'center',
     justifyContent: "center",
-  },
-  containerInner: {
-    paddingHorizontal: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    textAlign: "center",
-    marginBottom: 20,
-  },
-  box: {
-    borderWidth: 1,
-    borderColor: "#ddd",
-    padding: 15,
-    marginBottom: 10,
-    alignItems: "center",
-  },
-  boxLabel: {
-    textTransform: "uppercase",
-    fontSize: 12,
-    letterSpacing: 1,
-    marginBottom: 5,
-  },
-  boxText: {
-    fontSize: 16,
-    fontWeight: "bold",
   },
   image: {
     width: 50,
@@ -192,7 +167,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
   largeText: {
-    fontSize: 40,
+    fontSize: 20,
   },
   smallText: {
     fontSize: 18,
