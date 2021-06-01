@@ -52,15 +52,17 @@ function Search(props) {
         <ActivityIndicator color="black" size="large" />
       ) : (
         <ImageBackground
-          source={"../../assets/weather/lc.gif"}
+          // source={require("../../assets/weather/lc.gif")}
+          source={weather.bgImage}
           style={styles.imageContainer}
           imageStyle={styles.bgImage}
         >
           <View>
+            <Text style={[styles.largeText, styles.textStyle]}>
+              {weather.location}
+            </Text>
 
-            <Text style={[styles.largeText, styles.textStyle]}>{weather.location}</Text>
-
-			<Image style={styles.image} source={weather.icon} />
+            <Image style={styles.image} source={weather.icon} />
             <Text style={[styles.smallText, styles.textStyle]}>
               {weather.condition}
             </Text>
@@ -71,16 +73,16 @@ function Search(props) {
             <TextInput
               nativeID="cityInput"
               placeholder="City Name"
-			//   autoCorrect={false}
-			//   placeholderTextColor="white"
-            //   underlineColorAndroid="transparent"
-            //   style={styles.searchTextInput}
+              //   autoCorrect={false}
+              //   placeholderTextColor="white"
+              //   underlineColorAndroid="transparent"
+              //   style={styles.searchTextInput}
               onChangeText={(city) => {
                 setCity(city);
               }}
             />
             <Button onPress={getWeather} title="Search" />
-      
+
             {/* <Text>{weather.temp}</Text>
             <Text>{weather.condition}</Text>
             <Text>{weather.icon}</Text>
@@ -93,10 +95,10 @@ function Search(props) {
 }
 
 const styles = StyleSheet.create({
-	searchTextInput:{
-		flex: 1,
-        color: 'white',
-	},
+  searchTextInput: {
+    flex: 1,
+    color: "white",
+  },
   imageContainer: {
     flex: 1,
   },
@@ -136,6 +138,8 @@ const styles = StyleSheet.create({
     width: 50,
     height: 40,
     alignContent: "center",
+    // textAlign: "center",
+    alignItems: "center",
   },
   bgImage: {
     flex: 1,
@@ -149,9 +153,10 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
   },
   textStyle: {
-    textAlign: 'center',
+    textAlign: "center",
+    padding: "5%",
     // fontFamily: Platform.OS === 'ios' ? 'AvenirNext-Regular' : 'Roboto',
-    color: 'white'
+    color: "white",
   },
   largeText: {
     fontSize: 44,
@@ -160,22 +165,21 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   textInput: {
-    backgroundColor: '#666',
-    color: 'white',
+    backgroundColor: "#666",
+    color: "white",
     height: 40,
     width: 300,
     marginTop: 20,
     marginHorizontal: 20,
     paddingHorizontal: 10,
-    alignSelf: 'center',
+    alignSelf: "center",
   },
   detailsContainer: {
     flex: 1,
-    justifyContent: 'center',
-    backgroundColor: 'rgba(0,0,0,0.2)',
+    justifyContent: "center",
+    backgroundColor: "rgba(0,0,0,0.2)",
     paddingHorizontal: 20,
-
-  }
+  },
 });
 
 export default Search;

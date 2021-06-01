@@ -13,9 +13,10 @@ export const getImageBackgroundSrc = (weatherName) => {
         'hr': require('./../../assets/weather/hr.jpg'), //Heavy Rain
         'lr': require('./../../assets/weather/lr.gif'), //Light Rain
         's': require('./../../assets/weather/s.gif'), //Showers
-        'hc': require('./../../assets/weather/h.jpg'), //Heavy Cloud
-        'lc': require('./../../assets/weather/lc.gif'), //Light Cloud
+        'Partly cloudy': require('./../../assets/weather/h.jpg'), //Heavy Cloud
+        'Sunny': require('./../../assets/weather/lc.gif'), //Light Cloud
         'Clear': require('./../../assets/weather/c.gif'), //Clear
+        'Mist': require('./../../assets/weather/sl.jpg'), // Mist
 
         // 'sn': './../../assets/weather/sn.jpg', //snow
         // 'sl': './../../assets/weather/sl.jpg', //Sleet
