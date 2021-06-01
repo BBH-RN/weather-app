@@ -139,7 +139,8 @@ const styles = StyleSheet.create({
     height: 40,
     alignContent: "center",
     // textAlign: "center",
-    alignItems: "center",
+    // alignItems: "center",
+
   },
   bgImage: {
     flex: 1,
