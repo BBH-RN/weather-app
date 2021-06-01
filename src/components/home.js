@@ -28,6 +28,20 @@ function Home() {
     })();
   }, []);
 
+// 	let longitude = "",
+// 		latitude = "";
+// 	if (errMsg) {
+// 		let text = errMsg;
+// 	} else if (location) {
+// 		longitude = JSON.stringify(location.longitude);
+// 		latitude = JSON.stringify(location.latitude);
+// 	}
+
+// 	return (
+// 		<View style={styles.container}>
+// 			<CurrentLocation location={location} />
+// 		</View>
+// 	);
   let longitude = "",
     latitude = "";
   if (errMsg) {
