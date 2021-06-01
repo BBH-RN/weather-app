@@ -30,7 +30,7 @@ function Home() {
 	let longitude = "",
 		latitude = "";
 	if (errMsg) {
-		text = errMsg;
+		let text = errMsg;
 	} else if (location) {
 		longitude = JSON.stringify(location.longitude);
 		latitude = JSON.stringify(location.latitude);
@@ -38,10 +38,6 @@ function Home() {
 
 	return (
 		<View style={styles.container}>
-			{/* <Text>Current Location</Text> */}
-			{/* <Text style={styles.paragraph}>{`Longitude: ${longitude}`}</Text> */}
-
-			{/* <Text style={styles.paragraph}>{`Latitude: ${latitude}`}</Text> */}
 			<CurrentLocation location={location} />
 		</View>
 	);
