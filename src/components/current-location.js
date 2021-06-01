@@ -44,10 +44,11 @@ function CurrentLocation(props) {
     if (latitude && longitude) getWeather(api);
   }, [props.location]);
 
+var icon = weather.icon
+  ? weather.icon
+  : require('../../assets/icon.png');
   return (
-    // <View>
-    //   <Text>{weather.location}</Text>
-    // </View>
+
 	<KeyboardAvoidingView style={styles.container} behavior="padding">
 	{weather.loading ? (
 	  <ActivityIndicator color="black" size="large" />
@@ -63,7 +64,7 @@ function CurrentLocation(props) {
 			{weather.location}
 		  </Text>
 
-		  <Image style={styles.image} source={weather.icon} />
+		  <Image style={styles.image} source={icon} />
 		  <Text style={[styles.smallText, styles.textStyle]}>
 			{weather.condition}
 		  </Text>

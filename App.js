@@ -43,7 +43,7 @@ function SearchStackScreen() {
 }
 
 export default function App() {
-	const {width: windowWidth, height: windowHeight} = useWindowDimensions();
+	
 	const scrollX = useRef(new Animated.Value(0)).current;
 	const Tab = createBottomTabNavigator();
 	return (
