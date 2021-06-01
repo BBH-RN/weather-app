@@ -59,6 +59,7 @@ function CurrentLocation(props) {
 	}, [props.location]);
 
 	return (
+
 		<View>
 
 			{weather.loading ? (
@@ -193,6 +194,13 @@ function CurrentLocation(props) {
 				</ImageBackground>
 			)}
 		
+// 		  <Image style={styles.image} source={icon} />
+// 		  <Text style={[styles.smallText, styles.textStyle]}>
+// 			{weather.condition}
+// 		  </Text>
+// 		  <Text style={[styles.largeText, styles.textStyle]}>
+// 			{weather.temp}°
+// 		  </Text>
 		</View>
 	);
 }

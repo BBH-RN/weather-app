@@ -299,6 +299,7 @@ const styles = StyleSheet.create({
 		height: 10,
 		justifyContent: "center",
 	},
+
 });
 
 export default Search;
