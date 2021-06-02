@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
   searchTextInput: {
     flex: 1,
     color: "white",
+    
   },
   imageContainer: {
     flex: 1,

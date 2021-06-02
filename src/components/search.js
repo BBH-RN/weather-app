@@ -63,6 +63,8 @@ function Search(props) {
 					source={{ uri: weather.bgImage }}
 					style={styles.imageContainer}
 					imageStyle={styles.bgImage}
+					
+					
 				>
 					<TextInput
 						nativeID="cityInput"
@@ -70,8 +72,23 @@ function Search(props) {
 						onChangeText={(city) => {
 							setCity(city);
 						}}
+						style={{ 
+							borderWidth: 2,
+							borderColor: "#ffffff5c",
+							textAlign:"center",
+						    padding:"10px",
+						width:"150px",
+					    marginLeft:"12px",
+					marginTop:"10px",
+				    borderRadius:"10px",
+					marginBottom:"10px",
+				color:"white"}}
 					/>
-					<Button onPress={getWeather} title="Search" />
+					<Button 
+					onPress={getWeather} title="Search"
+					color="#ffffff5c"
+					
+					 />
 					<If condition={weather.temp}>
 						<Then>
 							<View style={styles.weatherContainer}>
@@ -186,8 +203,10 @@ const styles = StyleSheet.create({
 	searchTextInput: {
 		flex: 1,
 		color: "white",
+		
 	},
 	imageContainer: {
+		
 		flex: 1,
 	},
 	container: {
@@ -215,6 +234,7 @@ const styles = StyleSheet.create({
 		marginHorizontal: 20,
 		paddingHorizontal: 10,
 		alignSelf: "center",
+
 	},
 	//=================================================================\\
 	weatherContainer: {
@@ -230,6 +250,7 @@ const styles = StyleSheet.create({
 	},
 	imageContainer: {
 		flex: 1,
+		backgroundColor: "#16191C",
 	},
 	container: {
 		flex: 1,
@@ -301,6 +322,9 @@ const styles = StyleSheet.create({
 		marginHorizontal: 20,
 		paddingHorizontal: 10,
 		alignSelf: "center",
+		
+	
+
 	},
 	detailsContainer: {
 		flex: 1,
@@ -310,6 +334,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 
+	
 });
 
 export default Search;

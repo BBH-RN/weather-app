@@ -32,7 +32,7 @@ function HomeStackScreen() {
 
 function SearchStackScreen() {
 	return (
-		<SearchStack.Navigator>
+		<SearchStack.Navigator >
 			<SearchStack.Screen
 				name="Search"
 				component={Search}
