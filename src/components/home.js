@@ -69,7 +69,7 @@ function Home() {
 				<View style={{ height: windowHeight }}>
 					<CurrentLocation location={location} />
 				</View>
-				<View>
+				<View style={{ height: windowHeight }}>
 					{/* <Text>Hello This is the second view</Text> */}
 					<MoreDetails location={location} />
 				</View>

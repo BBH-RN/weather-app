@@ -84,6 +84,7 @@ function Search(props) {
 										style={[
 											styles.largeText,
 											styles.textStyle,
+											styles.eachForecastContainer,
 										]}
 									>
 										{weather.location}
@@ -176,6 +177,12 @@ function Search(props) {
 }
 
 const styles = StyleSheet.create({
+	eachForecastContainer: {
+		alignSelf: "stretch",
+		backgroundColor: "rgba(255, 255, 255, 0.2)",
+		borderTopWidth: 1,
+		borderTopColor: "rgba(255, 255, 255, 0.3)",
+	},
 	searchTextInput: {
 		flex: 1,
 		color: "white",
@@ -259,12 +266,15 @@ const styles = StyleSheet.create({
 		alignSelf: "stretch",
 	},
 	textStyle: {
-		textShadowColor: "#0000",
-		textShadowOffset: { width: -1, height: 1 },
-		textShadowRadius: 10,
+		// textShadowColor: "#0000",
+		// textShadowOffset: { width: -1, height: 1 },
+		// textShadowRadius: 10,
 		textAlign: "center",
 		padding: "5%",
 		color: "white",
+		textShadowColor: 'rgba(0, 0, 0, 0.75)',
+		textShadowOffset: {width: -1, height: 1},
+		textShadowRadius: 20
 	},
 	largeText: {
 		fontSize: 20,

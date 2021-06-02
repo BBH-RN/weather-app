@@ -1,33 +1,23 @@
 
 
-
-
-
-
 export const getImageBackgroundSrc = (weatherName) => {
     let listWeather = {
-        'sn': require('./../../assets/weather/sn.jpg'), //snow
-        'sl': require('./../../assets/weather/sl.jpg'), //Sleet
-        'h': require('./../../assets/weather/h.jpg'), //Hail
-        't': require('./../../assets/weather/t.jpg'), //Thunderstorm
-        'hr': require('./../../assets/weather/hr.jpg'), //Heavy Rain
-        'lr': require('./../../assets/weather/lr.gif'), //Light Rain
-        'Overcast': require('./../../assets/weather/s.gif'), //Showers
-        'Partly cloudy': require('./../../assets/weather/h.jpg'), //Heavy Cloud
-        'Sunny': require('./../../assets/weather/lc.gif'), //Light Cloud
-        'Clear': require('./../../assets/weather/c.gif'), //Clear
-        'Mist': require('./../../assets/weather/sl.jpg'), // Mist
+        'Clear': require('./../../assets/weatherbg/Clear.gif'), //Clear
+        'Cloudy': require('./../../assets/weatherbg/cloudy.gif'), //snow
+        'Light rain': require('./../../assets/weatherbg/Light rain shower.gif'), //Sleet
+        'Shower': require('./../../assets/weatherbg/Light rain shower.gif'), //Sleet
+        'Light': require('./../../assets/weatherbg/Light.gif'), //Sleet
+        'Mist': require('./../../assets/weatherbg/Mist.gif'), // Mis
 
-        // 'sn': './../../assets/weather/sn.jpg', //snow
-        // 'sl': './../../assets/weather/sl.jpg', //Sleet
-        // 'h': './../../assets/weather/h.jpg', //Hail
-        // 't': './../../assets/weather/t.jpg', //Thunderstorm
-        // 'hr': './../../assets/weather/hr.jpg', //Heavy Rain
-        // 'lr': './../../assets/weather/lr.gif', //Light Rain
-        // 's': './../../assets/weather/s.gif', //Showers
-        // 'hc': './../../assets/weather/h.jpg', //Heavy Cloud
-        // 'lc': './../../assets/weather/lc.gif', //Light Cloud
-        // 'Clear': './../../assets/weather/c.gif', //Clear
+        'Moderate': require('./../../assets/weatherbg/Moderate or heavy rain shower.gif'), //Sleet
+        'Heavy rain shower': require('./../../assets/weatherbg/Moderate or heavy rain shower1.gif'), //Sleet
+        'Overcast': require('./../../assets/weatherbg/Overcast.gif'), //Showers
+        'Partly cloudy': require('./../../assets/weatherbg/Partly cloudy.gif'), //Heavy Cloud
+        'Patchy light drizzle': require('./../../assets/weatherbg/Patchy light drizzle.gif'), //Hail
+        'Patchy rain possible': require('./../../assets/weatherbg/Patchy rain possible.gif'), //Hail
+        'Snow': require('./../../assets/weatherbg/Snow.gif'), //Hail
+        'Sunny': require('./../../assets/weatherbg/Sunny.gif'), //Light Cloud
+        
     };
 
     return listWeather[weatherName];

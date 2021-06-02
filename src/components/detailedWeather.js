@@ -58,29 +58,21 @@ function moreDetails(props) {
           style={styles.imageContainer}
           imageStyle={styles.bgImage}
         >
-          <View>
+          <View style={styles.eachForecastContainer}>
             <Text style={[styles.largeText, styles.textStyle]}>
               {weather.date}
             </Text>
           </View>
-          <View  >
+          <View style={styles.eachForecastContainer}>
             <If condition={weatherPerHour.length > 0}>
               <Then>
-                <ScrollView >
+                <ScrollView>
                   {weatherPerHour.map((hour) => {
-                    {
-                      console.log(hour);
-                    }
                     if (hour.is_day) {
                       return (
                         <>
                           <Text
-                            style={{
-                              borderBottomColor: "black",
-                              borderBottomWidth: 1,
-                              textAlignVertical: 'center',
-                              borderColor: '#000'
-                            }}
+                            style={[styles.smallText, styles.textStyle]}
                             key={hour.time}
                           >
                             <Image
@@ -96,13 +88,7 @@ function moreDetails(props) {
                         <>
                           <Text
                             key={hour.time}
-                            style={{
-                              borderBottomColor: "black",
-                              borderBottomWidth: 1,
-                              padding: 2,
-                              textAlignVertical: 'center',
-                              borderColor: '#000'
-                            }}
+                            style={[styles.smallText, styles.textStyle]}
                           >
                             <Image
                               style={styles.image}
@@ -128,6 +114,12 @@ function moreDetails(props) {
 }
 
 const styles = StyleSheet.create({
+  eachForecastContainer: {
+    alignSelf: "stretch",
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    borderTopWidth: 1,
+    borderTopColor: "rgba(255, 255, 255, 0.3)",
+  },
   searchTextInput: {
     flex: 1,
     color: "white",
@@ -154,6 +146,7 @@ const styles = StyleSheet.create({
     width: null,
     height: null,
     resizeMode: "cover",
+    
   },
   tempContainer: {
     flexDirection: "row",
@@ -165,12 +158,22 @@ const styles = StyleSheet.create({
     padding: "5%",
     // fontFamily: Platform.OS === 'ios' ? 'AvenirNext-Regular' : 'Roboto',
     color: "white",
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+		textShadowOffset: {width: -1, height: 1},
+		textShadowRadius: 10
   },
   largeText: {
     fontSize: 20,
   },
   smallText: {
-    fontSize: 18,
+    fontSize: 15,
+    alignItems: 'center',
+    borderBottomColor: "silver",
+    borderBottomWidth: 1,
+    padding: 2,
+    textAlignVertical: "center",
+    borderColor: "#000",
+    marginRight: 30
   },
   textInput: {
     backgroundColor: "#666",

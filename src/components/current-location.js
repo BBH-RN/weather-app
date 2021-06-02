@@ -216,6 +216,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: "silver",
 		justifyContent: "center",
+		
 	},
 	image: {
 		width: 50,
@@ -224,8 +225,11 @@ const styles = StyleSheet.create({
 	},
 	bgImage: {
 		flex: 1,
-		width: 300,
+		// width: 300,
 		// height: null,
+		width: null,
+		height: 900,
+    // height: 'auto',
 		resizeMode: "cover",
 	},
 	eachDetailContainer: {
@@ -250,6 +254,9 @@ const styles = StyleSheet.create({
 		textAlign: "center",
 		padding: "5%",
 		color: "white",
+		textShadowColor: 'rgba(0, 0, 0, 0.75)',
+		textShadowOffset: {width: -1, height: 1},
+		textShadowRadius: 10
 	},
 	largeText: {
 		fontSize: 20,
