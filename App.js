@@ -50,7 +50,7 @@ export default function App() {
 		<View style={styles.container}>
 			<NavigationContainer>
 				<Tab.Navigator>
-					<Tab.Screen name="Current Location" component={HomeStackScreen} />
+					<Tab.Screen name="My Location" component={HomeStackScreen} />
 					<Tab.Screen
 						name="Search"
 						component={SearchStackScreen}
@@ -65,7 +65,9 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		// backgroundColor: "#fff",
+		// backgroundColor: "rgba(255, 255, 255, 0.2)",
 		alignItems: "center",
 		justifyContent: "center",
+
 	},
 });

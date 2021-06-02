@@ -69,24 +69,25 @@ function moreDetails(props) {
                 <View >
                 <ScrollView vertically={true} contentContainerStyle = { styles.scrollView }>
                   {weatherPerHour.map((hour) => {
-                    if (hour.is_day) {
+                    if (hour.is_day == 0) {
                       return (
                         <>
                           <Text
-                            style={[styles.smallText, styles.textStyle]}
+                          
                             key={hour.time}
-                            
+                            style={[styles.smallText, styles.textStyle]}
                           >
                             <Image
                               style={styles.image}
-                              source={require("../../assets/icons/weather02-512.png")}
+                              source={require("../../assets/icons/partly-cloudy-night.png")}
                             />
                             {hour.time.split(" ")[1]} : {hour.temp_c}°
                           </Text>
                         </>
                       );
                     }
-                  })}
+                  })
+                    }
                 </ScrollView>
                 </View>
                 
@@ -184,6 +185,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0,0,0,0.2)",
     paddingHorizontal: 20,
   },
+
 });
 
 export default moreDetails;

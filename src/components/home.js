@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import CurrentLocation from "./current-location";
 import MoreDetails from "./detailedWeather";
+import MoreDetails2 from './detailedWeather copy'
 import * as Location from "expo-location";
 
 function Home() {
@@ -70,8 +71,10 @@ function Home() {
 					<CurrentLocation location={location} />
 				</View>
 				<View style={{ height: windowHeight }}>
-					{/* <Text>Hello This is the second view</Text> */}
 					<MoreDetails location={location} />
+				</View>
+				<View style={{ height: windowHeight }}>
+					<MoreDetails2 location={location} />
 				</View>
 			</ScrollView>
 		</>

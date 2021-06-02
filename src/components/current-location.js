@@ -225,9 +225,9 @@ const styles = StyleSheet.create({
 	},
 	bgImage: {
 		flex: 1,
-		// width: 300,
+		width: 300,
 		// height: null,
-		width: null,
+		// width: null,
 		height: 900,
     // height: 'auto',
 		resizeMode: "cover",
